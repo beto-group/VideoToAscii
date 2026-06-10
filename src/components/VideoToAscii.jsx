@@ -366,7 +366,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
                         </div>
                         <input
                             type="range"
-                            min="20" max="250"
+                            min="20" max="500"
                             style={STYLES.range}
                             value={charWidth}
                             onChange={(e) => setCharWidth(parseInt(e.target.value))}
