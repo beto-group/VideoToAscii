@@ -68,6 +68,7 @@ const STYLES = {
         gap: '20px',
         minWidth: '280px',
         border: '1px solid var(--background-modifier-border)',
+        overflowY: 'auto',
     },
     inputGroup: {
         display: 'flex',
