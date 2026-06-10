@@ -15,7 +15,8 @@ repository:
   - https://github.com/beto-group/VideoToAscii
 missing: []
 resources:
-  - assets/preview.gif
+  - assets/video_to_ascii.webp
+  - assets/videotoascii.clip.gif
 type: DatacoreComponent
 target: Datacore
 security:

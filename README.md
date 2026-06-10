@@ -1,3 +1,4 @@
+
 <div align="center">
   <a name="readme-top"></a>
   <img src="https://raw.githubusercontent.com/beto-group/beto.assets/main/BETO.logo.animated.svg?raw=true" alt="LOGO" width="160">
@@ -18,7 +19,7 @@
   <hr>
 </div>
 
-<img src="assets/preview.gif" alt="Video to ASCII Walkthrough" width="100%">
+<img src="assets/videotoascii.clip.gif" alt="Video to ASCII Walkthrough" width="100%">
 
 <div align="center">
   <p>
