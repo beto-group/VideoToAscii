@@ -8,7 +8,7 @@
 
 <div align="center">
   <!-- TOP PURPLE LINKS -->
-  <a href="https://beto.group"><img src="https://img.shields.io/badge/WEBSITE-7A46F1?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtZXh0ZXJuYWwtbGluayI+PHBhdGggZD0iTTE4IDEzdjZhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWOGEyIDIgMCAwIDEgMi0yaGYiLz48cG9seWxpbmUgcG9pbnRzPSIxNSAzIDIxIDMgMjEgOSIvPjxsaW5lIHgxPSIxMCIgeDI9IjIxIiB5MT0iMTQiIHkyPSIzIi8+PC9zdmc+" alt="WEBSITE"></a>
+  <a href="https://beto.group"><img src="https://img.shields.io/badge/WEBSITE-7A46F1?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtZXh0ZXJuYWwtbGluayI+PHBhdGggZD0iTTE4IDEzdjZhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWOGEyIDIgMCAwIDEgMi0yaDYiLz48cG9seWxpbmUgcG9pbnRzPSIxNSAzIDIxIDMgMjEgOSIvPjxsaW5lIHgxPSIxMCIgeDI9IjIxIiB5MT0iMTQiIHkyPSIzIi8+PC9zdmc+" alt="WEBSITE"></a>
   <a href="https://discord.com/invite/6rDp4q4Y2B"><img src="https://img.shields.io/badge/DISCORD-7A46F1?style=for-the-badge&logo=discord&logoColor=white" alt="JOIN OUR DISCORD"></a>
   <a href="https://github.com/sponsors/beto-group"><img src="https://img.shields.io/badge/Sponsor-7A46F1?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="SUPPORT US ON GITHUB"></a>
   <br/>
@@ -19,11 +19,11 @@
   <hr>
 </div>
 
-<img src="assets/videotoascii.clip.gif" alt="Video to ASCII Walkthrough" width="100%">
+<img src="assets/videos/preview.gif" alt="Video to ASCII Walkthrough" width="100%">
 
 <div align="center">
   <p>
-    <i> A real-time video to ASCII converter mapping frame luminance to customizable terminal glyphs. </i>
+    <i> A real-time video to ASCII art converter mapping frame luminance to customizable terminal glyphs. </i>
   </p>
   <hr style="width:30%;">
 </div>
@@ -32,15 +32,17 @@ Welcome to **Video to ASCII**. This component processes local video files frame-
 
 ---
 
-## ✨ Features
-- 🎬 **Real-Time Processing**: Render local video files frame-by-frame instantly.
-- ⚙️ **Custom Parameters**: Fine-tune contrast, resolution width, and X/Y aspect scaling.
-- 🎨 **Phosphor Presets**: Custom retro theme colors for the terminal canvas.
-- 📥 **Flexible Exports**: Save frames as `.TXT` text files, single-frame `.HTML` scripts, or full interactive HTML video animations.
+## Features
+
+### Data Ingestion & Analysis
+*   **Real-Time Processing**: Render local video files frame-by-frame instantly.
+*   **Custom Parameters**: Fine-tune contrast, resolution width, and X/Y aspect scaling.
+*   **Phosphor Presets**: Custom retro theme colors for the terminal canvas.
+*   **Flexible Exports**: Save frames as `.TXT` text files, single-frame `.HTML` scripts, or full interactive HTML video animations.
 
 ---
 
-## 📦 Directory Index & Components
+## Directory Index & Components
 
 The package exposes the following files:
 
@@ -54,3 +56,25 @@ The package exposes the following files:
 | **[METADATA.md](METADATA.md)** | Packaging manifest outlining complexity, category, and dependencies. |
 | **[CONTRIBUTION.md](CONTRIBUTION.md)** | Guidelines on zero ESM exports and modular layout. |
 | **[LICENSE.md](LICENSE.md)** | License specifications. |
+
+---
+
+## Quick Start
+
+1. Download the Repository (cloning or downloading into the Obsidian vault folder).
+2. Install Datacore (ensuring the plugin is active).
+3. Open the Entry Note (specifying the exact loader note `VIDEO TO ASCII.md`).
+
+---
+
+## Previews
+
+| Preview | Description |
+| :--- | :--- |
+| ![Preview 1](assets/image/preview_1.webp) | Video to ASCII converter UI with terminal color controls and character resolution configuration. |
+
+---
+
+## Contributors
+
+- beto.group

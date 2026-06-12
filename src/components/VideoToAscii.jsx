@@ -84,7 +84,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
         previousBufferRef.current = buffer;
         setAscii(newAscii);
 
-        if (isProcessing) requestAnimationFrame(processFrame);
+        if (isProcessing) window.requestAnimationFrame(processFrame);
     };
 
     // Live preview update when settings change (even if paused)
@@ -93,13 +93,13 @@ function VideoToAscii({ styles, folderPath, ...props }) {
             // Need to wait for video to be ready or just try processing
             // Reset buffer if resolution changes to avoid size mismatch artifacts or errors
             // (processFrameToAscii handles resize but we should be aware)
-            requestAnimationFrame(processFrame);
+            window.requestAnimationFrame(processFrame);
         }
     }, [charWidth, contrast, charset, scaleX, scaleY, smoothing]);
 
     useEffect(() => {
         if (isProcessing) {
-            requestAnimationFrame(processFrame);
+            window.requestAnimationFrame(processFrame);
         }
     }, [isProcessing]);
 
@@ -114,7 +114,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
         if (videoRef.current) {
             videoRef.current.currentTime = time;
             setCurrentTime(time);
-            requestAnimationFrame(processFrame);
+            window.requestAnimationFrame(processFrame);
         }
     };
 
@@ -124,7 +124,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
             const newTime = Math.min(Math.max(0, videoRef.current.currentTime + (mod * 0.04)), duration);
             videoRef.current.currentTime = newTime;
             setCurrentTime(newTime);
-            requestAnimationFrame(processFrame);
+            window.requestAnimationFrame(processFrame);
         }
     };
 
@@ -149,7 +149,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
         if (!ascii) return;
         const blob = new Blob([ascii], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const a = activeDocument.createElement('a');
         a.href = url;
         a.download = `ascii-art-${Date.now()}.txt`;
         a.click();
@@ -160,7 +160,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
         const html = processorRef.current.getHtmlAscii(ascii, color);
         const blob = new Blob([html], { type: 'text/html' });
         const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const a = activeDocument.createElement('a');
         a.href = url;
         a.download = `ascii-art-${Date.now()}.html`;
         a.click();
@@ -180,7 +180,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
         const duration = video.duration;
 
         // Temporary canvas for rendering
-        const canvas = document.createElement('canvas');
+        const canvas = activeDocument.createElement('canvas');
         const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
         // Setup initial dimensions based on current settings
@@ -226,7 +226,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
         const html = processorRef.current.getHtmlPlayer(frames, fps, color);
         const blob = new Blob([html], { type: 'text/html' });
         const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const a = activeDocument.createElement('a');
         a.href = url;
         a.download = `ascii-video-${Date.now()}.html`;
         a.click();
@@ -306,7 +306,7 @@ function VideoToAscii({ styles, folderPath, ...props }) {
                     )}
 
                     <div style={{ display: 'flex', gap: '5px', marginTop: '10px' }}>
-                        <button style={STYLES.button} onClick={() => document.getElementById('ascii-file').click()}>
+                        <button style={STYLES.button} onClick={() => activeDocument.getElementById('ascii-file').click()}>
                             <dc.Icon icon="upload" style={{ width: '16px' }} />
                             {videoSrc ? 'Change' : 'Load'}
                         </button>
@@ -321,7 +321,6 @@ function VideoToAscii({ styles, folderPath, ...props }) {
                                 >
                                     <dc.Icon icon="chevron-left" style={{ width: '14px' }} />
                                 </button>
-
                                 <button
                                     style={{ ...STYLES.button, flex: 1, justifyContent: 'center' }}
                                     onClick={toggleProcessing}
@@ -329,7 +328,6 @@ function VideoToAscii({ styles, folderPath, ...props }) {
                                     <dc.Icon icon={isProcessing ? "pause" : "play"} style={{ width: '16px', marginRight: '5px' }} />
                                     {isProcessing ? 'PAUSE' : 'PLAY'}
                                 </button>
-
                                 <button
                                     style={{ ...STYLES.button, width: '30px', padding: '0', justifyContent: 'center' }}
                                     onClick={() => stepFrame(1)}

@@ -1,0 +1,9 @@
+{
+  "id": "video-to-ascii-888",
+  "name": "VideoToAscii",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.11",
+  "description": "Obsidian Datacore component that renders video files directly to ASCII terminal output in real-time.",
+  "author": "beto.group",
+  "isDesktopOnly": false
+}

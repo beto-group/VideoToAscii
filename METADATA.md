@@ -2,7 +2,7 @@
 author: beto.group
 version: 1.0.0
 id: video-to-ascii-91
-name: Video to ASCII
+name: VIDEO TO ASCII
 description: Real-time video-to-ASCII art converter mapping frame luminance to customizable terminal glyphs.
 status: stable
 complexity: intermediate
@@ -15,8 +15,8 @@ repository:
   - https://github.com/beto-group/VideoToAscii
 missing: []
 resources:
-  - assets/video_to_ascii.webp
-  - assets/videotoascii.clip.gif
+  - assets/image/preview_1.webp
+  - assets/videos/preview.gif
 type: DatacoreComponent
 target: Datacore
 security:
